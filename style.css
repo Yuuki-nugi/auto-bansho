@@ -1,0 +1,17 @@
+body {
+}
+
+.results {
+  display: flex;
+}
+.results div:first-child {
+  flex-basis: 50%;
+}
+.results div:last-child {
+  flex-basis: 50%;
+}
+.results video,
+.results canvas{
+  width: 100%;
+  border: 1px solid #000;
+}

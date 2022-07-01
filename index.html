@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Auto Bansho</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button id="start-capturing">Start Capturing</button>
+    <button id="stop-capturing" disabled="">Stop Capturing</button>
+    <br/>
+    <label for="filename">ファイル名</label>
+    <input type="text" id="filename" value="bansho">
+    <br/>
+    <label for="diff-percentage">変化判定値（%）</label>
+    <input type="number" id="diff-percentage" value="1" max="100" min="0">
+
+    <div class="results">
+        <div id="capture-stream">
+        </div>
+        <div id="screenshot">
+        </div>
+    </div>
+  </body>
+</html>
