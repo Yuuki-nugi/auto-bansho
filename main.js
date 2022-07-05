@@ -10,6 +10,7 @@ let holdCanvas = null;
 let saveCount = 0;
 let filename = null;
 let diffPercentage = null;
+let interval = null;
 
 startCapturingButton.addEventListener('click', async () => {
     captureStream = await navigator.mediaDevices.getDisplayMedia({ audio: false, video: true });
@@ -25,7 +26,9 @@ startCapturingButton.addEventListener('click', async () => {
         filename = textboxFilename.value;
         const textboxDiffPercentage = document.getElementById("diff-percentage");
         diffPercentage = textboxDiffPercentage.value / 100;
-        intervalId = setInterval(function(){getBansho()}, 3000);
+        const textboxInterval = document.getElementById("interval");
+        interval = textboxInterval.value * 1000;
+        intervalId = setInterval(function(){getBansho()}, interval);
     }
 
 });
